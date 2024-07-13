@@ -33,7 +33,7 @@ const Navbar = async () => {
 
         {/* User Profile */}
         <div className="ml-auto">
-          <UserButton afterSignOutUrl="/" />
+          <UserButton />
         </div>
       </div>
     </div>

@@ -26,9 +26,11 @@ const DashboardLayout = async ({ children, params }: DashboardLayoutProps) => {
     )
   );
 
-  let store: any = null;
+  let store;
 
-  storeSnap.forEach((doc) => (store = doc.data()));
+  storeSnap.forEach((doc) => {
+    store = doc.data() as Store;
+  });
 
   if (!store) {
     redirect("/");

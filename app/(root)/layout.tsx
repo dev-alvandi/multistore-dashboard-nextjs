@@ -22,11 +22,11 @@ const SetupLayout = async ({ children }: SetupLayoutProps) => {
   let store: any = [];
 
   storeSnap.forEach((doc) => {
-    store = doc.data();
+    store = doc.data() as Store;
     return;
   });
 
-  if (store) {
+  if (store && store.id) {
     redirect(`/${store.id}`);
   }
 

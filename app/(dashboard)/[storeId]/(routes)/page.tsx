@@ -13,7 +13,7 @@ import { priceFormatter } from "@/lib/utils";
 import { DollarSign } from "lucide-react";
 import React from "react";
 
-export const revalidate = 0;
+// export const revalidate = 0;
 
 interface DashboardOverviewProps {
   params: { storeId: string };
