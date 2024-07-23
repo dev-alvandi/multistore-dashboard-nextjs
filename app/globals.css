@@ -79,4 +79,13 @@ html,
   body {
     @apply bg-background text-foreground;
   }
+
+  .otp-custom-styles > * {
+    border: 1px solid black;
+    border-radius: 0.375rem;
+  }
+
+  .dark .otp-custom-styles > * {
+    border: 1px solid white;
+  }
 }
