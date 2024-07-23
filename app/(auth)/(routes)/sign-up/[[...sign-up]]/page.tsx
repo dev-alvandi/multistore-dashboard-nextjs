@@ -23,6 +23,7 @@ import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { useSignUp } from "@clerk/nextjs";
 import toast from "react-hot-toast";
+import Link from "next/link";
 
 const signUpFormSchema = z.object({
   email: z.string().min(2).max(50),
@@ -230,6 +231,12 @@ export default function Page() {
               </Button>
             </form>
           </Form>
+          <div className="text-sm flex items-center justify-center">
+            <p className="inline text-muted-foreground">
+              Already have an account?&nbsp;
+            </p>
+            <Link href={"/sign-in"}>Sign in</Link>
+          </div>
         </div>
       </div>
     </div>
